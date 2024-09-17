@@ -11,4 +11,4 @@ Exersise 1 Question:
   min_bright = 25000
 
 
- vIDEO: https://drive.google.com/file/d/1IxNBDPa2F2VmcFF7jd3RZzJEBy03mU7g/view?usp=sharing
+Video: https://drive.google.com/file/d/1IxNBDPa2F2VmcFF7jd3RZzJEBy03mU7g/view?usp=sharing
