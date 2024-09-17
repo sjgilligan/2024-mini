@@ -28,7 +28,6 @@ def connect():
     print(wlan.ifconfig())
 
 def random_time_interval(tmin: float, tmax: float) -> float:
-    """return a random time interval between max and min"""
     return random.uniform(tmin, tmax)
 
 def blinker(N: int, led: Pin) -> None:
@@ -43,7 +42,6 @@ def write_json(json_filename: str, data: dict) -> None:
         json.dump(data, f)
 
 def send_to_firebase(data: dict) -> None:
-    """Sends data to Firebase Realtime Database."""
     try:
         response = urequests.post(firebase_url + "scores.json", json=data)
         print("Data sent to Firebase. Response:", response.text)
@@ -69,9 +67,9 @@ def scorer(t: list[int | None]) -> None:
     score = (len(t) - misses) / len(t)
 
     data = {
-        "average_response_time": avg_response,
-        "minimum_response_time": min_response,
-        "maximum_response_time": max_response,
+        "average response time": avg_response,
+        "minimum response time": min_response,
+        "maximum response time": max_response,
         "score": score
     }
 
@@ -81,8 +79,6 @@ def scorer(t: list[int | None]) -> None:
 
     print("write", filename)
     write_json(filename, data)
-
-    # Send data to Firebase
     send_to_firebase(data)
 
 if __name__ == "__main__":
